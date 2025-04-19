@@ -5,7 +5,7 @@ exports.getAllMenuItems = async (req, res) => {
         const items = await MenuItem.find();
         res.json(items);
     } catch (err) {
-        res.status(500).json({ error: "Failed to fetch menu", details: err.message });
+        res.status(500).json({ error: err.message });
     }
 };
 
@@ -15,16 +15,36 @@ exports.getMenuItemById = async (req, res) => {
         if (!item) return res.status(404).json({ error: "Item not found" });
         res.json(item);
     } catch (err) {
-        res.status(500).json({ error: "Error fetching item", details: err.message });
+        res.status(500).json({ error: err.message });
     }
 };
 
 exports.addMenuItem = async (req, res) => {
     try {
-        const newItem = new MenuItem(req.body);
+        const { name, price, category, description } = req.body;
+        const imageUrl = req.file?.path; // Cloudinary URL
+
+        const newItem = new MenuItem({
+            name,
+            price,
+            category,
+            description,
+            imageUrl
+        });
+
         await newItem.save();
-        res.status(201).json({ message: "Item added", item: newItem });
+        res.status(201).json({ message: "Menu item added", item: newItem });
     } catch (err) {
-        res.status(400).json({ error: "Add failed", details: err.message });
+        res.status(400).json({ error: err.message });
+    }
+};
+
+exports.deleteMenuItem = async (req, res) => {
+    try {
+        const item = await MenuItem.findByIdAndDelete(req.params.id);
+        if (!item) return res.status(404).json({ error: "Item not found" });
+        res.json({ message: "Menu item deleted", item });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
 };
