@@ -61,7 +61,7 @@ cd backend
 npm install
 ```
 
-#### 🧪 Set up `.env`:
+####  Set up `.env`:
 
 Create a `.env` file based on `.env.example`:
 
@@ -145,16 +145,17 @@ Frontend runs on `http://localhost:5173`
 
 ---
 
-## ⚙️ Deployment
+##  Deployment
 
-- ✅ **Frontend on Netlify**: [https://resonant-llama-ab3a73.netlify.app]
-- 🔄 **Backend**: [thedigitaldinerbackend-production.up.railway.app]
+-  **Frontend on Netlify**: [https://resonant-llama-ab3a73.netlify.app]  - Deployed on Netlify
 
-> 🔁 CORS is enabled to allow Netlify frontend to access backend.
+-  **Backend**: [https://hedigitaldinerbackend-production.up.railway.app] - Deployed on Railway
+
+>  CORS is enabled to allow Netlify frontend to access backend.
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 - Tested with Postman and browser.
 - Clear error messages and validations in place.
@@ -162,7 +163,7 @@ Frontend runs on `http://localhost:5173`
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 TheDigitalDiner/
@@ -205,7 +206,7 @@ TheDigitalDiner/
 
 ---
 
-## 💡 Assumptions & Challenges
+##  Assumptions & Challenges
 
 ### Assumptions:
 - Orders are tied to phone numbers .
@@ -217,12 +218,12 @@ TheDigitalDiner/
 
 ---
 
-## 📜 License
+##  License
 
 This project is part of an internship assessment task and is for demonstration purposes.
 
 ---
 
-## 🤝 Credits
+##  Credits
 
 Made with ❤️ by [Rik Gorai](https://github.com/RikGorai) as part of the Eatoes internship assignment.
