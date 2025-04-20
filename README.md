@@ -4,6 +4,12 @@ A full-stack mini restaurant ordering system for a small restaurant. Users can b
 
 >  Live App Link: [https://resonant-llama-ab3a73.netlify.app]
 
+>  Admin login Id: {
+                  "phone": "9876543210",
+                  "password": "securepassword"
+                  }
+                  
+  [for adding and removing menu item feature]
 ---
 
 ##  Tech Stack
