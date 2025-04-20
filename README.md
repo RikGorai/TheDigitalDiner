@@ -8,8 +8,8 @@ A full-stack mini restaurant ordering system for a small restaurant. Users can b
                   "phone": "9876543210",
                   "password": "securepassword"
                   }
-                  
-  [for adding and removing menu item feature]
+
+  (for adding and removing menu item feature)
 ---
 
 ##  Tech Stack
